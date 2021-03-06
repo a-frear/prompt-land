@@ -1,0 +1,168 @@
+body {
+  background-color: #e2e2df;
+}
+
+.App {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  color: #2e2e3a;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+}
+
+.app_title {
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+  margin: 15px;
+  color: #2e2e3a;
+  text-decoration: none;
+}
+
+.landscape-img {
+  max-width: 300px;
+  margin: 50px 0px -30px 15px;
+}
+
+/*** USER NAV (PROFILE AND POST LINKS) ****/
+.userNav-header {
+  font-size: 24px;
+  text-transform: none;
+  margin-top: -50px;
+}
+
+.userNavUL {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-link-user {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.icon-nav {
+  color: #2e2e3a;
+}
+
+/*** PROMPT CARD *****/
+
+.user_name {
+  color: #bc5d2e;
+}
+
+.prompt_content {
+  color: #e93c0c;
+  font-size: 58px;
+}
+
+.date {
+  color: #331d0a;
+}
+
+.Prompt {
+  margin: 50px;
+  padding: 30px;
+  max-width: 500px;
+  border: solid 3px #2e2e3a;
+}
+
+.tag_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 24px;
+}
+
+/*** NEW PROMPT  *****/
+
+.new-prompt-form {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 500px;
+  border: solid 2px #2e2e3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-prompt-label {
+  margin: 10px;
+  font-size: 40px;
+}
+
+.char-limit {
+  margin-top: 5px;
+}
+
+#new-prompt-textarea {
+  width: 300px;
+  height: 100px;
+  font-family: "Newsreader", serif;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.new-prompt-submit {
+  margin-top: 15px;
+}
+
+/*** PROMPT LIST  *****/
+li {
+  list-style: none;
+}
+
+.prompt-feed-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*** LOG IN BUTTONS ****/
+.nav-log {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.log_button {
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #e3e1de;
+  font-size: 30px;
+  text-align: right;
+  margin-left: 25px;
+  margin-top: -10px;
+  padding: 10px;
+}
+
+/********* PROFILE **********/
+
+.profile {
+  margin: 25px;
+  text-align: center;
+}
+
+.profile-prompt-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/********* USER PROMPTS **********/
+.prompts-by {
+  text-align: center;
+  margin-top: 50px;
+}
