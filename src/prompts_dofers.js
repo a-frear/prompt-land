@@ -53,7 +53,7 @@ const prompts = [
     user: "freamy",
     modified: "2021-01-08 13:07:28",
     prompt: "dance to your least favorite song",
-    tags: ["whatever"],
+    tags: ["whatever", "dance"],
   },
   {
     id: 9,
@@ -66,7 +66,7 @@ const prompts = [
     id: 10,
     user: "film_person",
     modified: "2021-01-08 13:07:28",
-    prompt: "memory loss",
+    prompt: "everything happens in real time",
     tags: ["screenwriting", "playwriting"],
   },
 ];

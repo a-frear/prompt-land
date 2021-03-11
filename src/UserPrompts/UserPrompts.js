@@ -4,6 +4,7 @@ import { React, Component } from "react";
 import Prompt from "../Prompt/Prompt";
 import AOS from "aos";
 import PromptLandContext from "../PromptLandContext";
+import FollowButton from "../FollowButton/FollowButton"
 
 class UserPrompts extends Component {
   static defaultProps = {
@@ -27,6 +28,7 @@ class UserPrompts extends Component {
     return (
       <section className="PromptFeed">
         <h2 className="prompts-by">Prompts by {this.props.match.params.userId}</h2>
+        <FollowButton followUser={this.props.match.params.userId} /> 
         <ul className="prompt-feed-list">
           {userPrompts.map((prompt) => (
             <li key={prompt.id}>

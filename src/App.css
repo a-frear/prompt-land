@@ -82,6 +82,11 @@ body {
   font-size: 24px;
 }
 
+.tag-link {
+  text-decoration: none;
+  color: #2e2e3a
+}
+
 /*** NEW PROMPT  *****/
 
 .new-prompt-form {
@@ -165,4 +170,29 @@ li {
 .prompts-by {
   text-align: center;
   margin-top: 50px;
+}
+
+/********* FOLLOW BUTTON ************/
+.follow-button {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/********** DISCOVER *****************/
+.discover {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.discover-label {
+  font-size: 35px;
+}
+.discover-multiselect {
+  max-width: 600px;
+  min-width: 250px;
+  margin: 0 auto;
 }

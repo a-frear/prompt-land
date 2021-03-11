@@ -12,6 +12,7 @@ import TagFeed from "./TagFeed/TagFeed";
 import UserPrompts from "./UserPrompts/UserPrompts";
 import landscape from "./img/landscape.jpg";
 import landscapeMirror from "./img/landscape-mirror.jpg";
+import Discover from "./Discover/Discover";
 
 class App extends Component {
   state = {
@@ -52,6 +53,7 @@ class App extends Component {
           <Route path="/new-prompt" component={NewPrompt} />
           <Route path="/tags/:tagId" component={TagFeed} />
           <Route path="/users/:userId" component={UserPrompts} />
+          <Route path="/discover" component={Discover} />
         </div>
       </PromptLandContext.Provider>
     );
