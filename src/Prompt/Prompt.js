@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Prompt extends Component {
   // static defaultProps ={
@@ -36,14 +36,18 @@ class Prompt extends Component {
       <div className="Prompt">
         <h2 className="user_name">
           <Link className="app_title" to={`/users/${user}`}>
-          {user}
+            {user}
           </Link>
         </h2>
         <h3 className="date">{spliceDate}</h3>
         <p className="prompt_content">{prompt}</p>
         <ul className="tag_list">
           {tags.map((tag) => (
-            <li key={tag}><Link className="tag-link" to={`/tags/${tag}`}>#{tag}</Link></li>
+            <li key={tag}>
+              <Link className="tag-link" to={`/tags/${tag}`}>
+                #{tag}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

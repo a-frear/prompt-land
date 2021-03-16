@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import MultiSelect from "react-multi-select-component";
-import DiscoverList from "../DiscoverList/DiscoverList"
+import DiscoverList from "../DiscoverList/DiscoverList";
 
 const Discover = () => {
   const [selected, setSelected] = useState([]);
@@ -29,7 +29,7 @@ const Discover = () => {
       <form className="discover-form">
         <label className="discover-label">Choose medium(s):</label>
         <MultiSelect
-        className= "discover-multiselect"
+          className="discover-multiselect"
           options={options}
           value={selected}
           onChange={setSelected}
@@ -38,7 +38,7 @@ const Discover = () => {
         />
       </form>
       <section className="PromptFeed">
-        <DiscoverList tags={selected}/>
+        <DiscoverList tags={selected} />
       </section>
     </div>
   );

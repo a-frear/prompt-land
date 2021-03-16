@@ -15,8 +15,9 @@ class TagFeed extends Component {
 
   render() {
     const { prompts = [] } = this.context;
-    const tagPrompts = prompts.filter(p =>
-        p.tags.includes(this.props.match.params.tagId))
+    const tagPrompts = prompts.filter((p) =>
+      p.tags.includes(this.props.match.params.tagId)
+    );
     AOS.init({
       delay: 200,
     });

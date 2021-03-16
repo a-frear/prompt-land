@@ -23,7 +23,6 @@ class App extends Component {
     const contextValue = {
       prompts: this.state.prompts,
     };
-    console.log(contextValue);
     return (
       <PromptLandContext.Provider value={contextValue}>
         <div className="App">
