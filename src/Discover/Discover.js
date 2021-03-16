@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import MultiSelect from "react-multi-select-component";
+import DiscoverList from "../DiscoverList/DiscoverList"
 
 const Discover = () => {
   const [selected, setSelected] = useState([]);
@@ -35,10 +36,10 @@ const Discover = () => {
           labelledBy={"Select"}
           hasSelectAll={false}
         />
-        <div>
-          <button className="discover-submit">Submit</button>
-        </div>
       </form>
+      <section className="PromptFeed">
+        <DiscoverList tags={selected}/>
+      </section>
     </div>
   );
 };
