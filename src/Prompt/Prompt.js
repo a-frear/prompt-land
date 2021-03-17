@@ -28,15 +28,15 @@ class Prompt extends Component {
   // }
 
   render() {
-    const { prompt, modified, user, tags } = this.props;
+    const { prompt, modified, username, tags } = this.props;
     const splitDate = modified.split("");
     const spliceDate = splitDate.splice(0, 10);
 
     return (
       <div className="Prompt">
         <h2 className="user_name">
-          <Link className="app_title" to={`/users/${user}`}>
-            {user}
+          <Link className="app_title" to={`/users/${username}`}>
+            {username}
           </Link>
         </h2>
         <h3 className="date">{spliceDate}</h3>

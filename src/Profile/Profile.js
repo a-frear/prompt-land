@@ -10,7 +10,7 @@ const Profile = () => {
   const { prompts } = useContext(PromptLandContext);
 
   const userPrompts = prompts.filter(function (prompt) {
-    return prompt.user === user.nickname;
+    return prompt.username === user.nickname;
   });
 
   return (
@@ -27,7 +27,7 @@ const Profile = () => {
               <li className="profile-prompt-list" key={prompt.id}>
                 <Prompt
                   id={prompt.id}
-                  user={prompt.user}
+                  username={prompt.username}
                   prompt={prompt.prompt}
                   modified={prompt.modified}
                   tags={prompt.tags}

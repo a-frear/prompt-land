@@ -5,7 +5,6 @@ import "./App.css";
 import Nav from "./Nav/Nav";
 import Profile from "./Profile/Profile";
 import PromptLandContext from "./PromptLandContext";
-import prompts from "./prompts_dofers";
 import UserNav from "./UserNav/UserNav";
 import NewPrompt from "./NewPrompt/NewPrompt";
 import TagFeed from "./TagFeed/TagFeed";
@@ -13,11 +12,38 @@ import UserPrompts from "./UserPrompts/UserPrompts";
 import landscape from "./img/landscape.jpg";
 import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
+const {API_BASE_URL} = require('./config');
 
 class App extends Component {
+
   state = {
-    prompts: prompts,
+    prompts: [],
+    error: null,
   };
+
+  setPrompts = (prompts) => {
+    this.setState({
+      prompts,
+      error: null,
+    });
+  };
+
+  componentDidMount() {
+    fetch(`${API_BASE_URL}/prompts`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
+      .then(this.setPrompts)
+      .catch((error) => this.setState({ error }));
+  }
 
   render() {
     const contextValue = {

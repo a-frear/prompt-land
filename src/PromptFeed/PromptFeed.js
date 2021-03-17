@@ -30,7 +30,7 @@ class PromptFeed extends Component {
               <div data-aos="fade-down">
                 <Prompt
                   id={prompt.id}
-                  user={prompt.user}
+                  username={prompt.username}
                   prompt={prompt.prompt}
                   modified={prompt.modified}
                   tags={prompt.tags}

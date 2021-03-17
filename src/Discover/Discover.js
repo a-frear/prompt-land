@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import MultiSelect from "react-multi-select-component";
 import DiscoverList from "../DiscoverList/DiscoverList";
 

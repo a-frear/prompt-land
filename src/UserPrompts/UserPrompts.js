@@ -17,7 +17,7 @@ class UserPrompts extends Component {
   render() {
     const { prompts = [] } = this.context;
     const userPrompts = prompts.filter(
-      (p) => p.user === this.props.match.params.userId
+      (p) => p.username === this.props.match.params.userId
     );
     AOS.init({
       delay: 200,
@@ -38,7 +38,7 @@ class UserPrompts extends Component {
               <div data-aos="fade-down">
                 <Prompt
                   id={prompt.id}
-                  user={prompt.user}
+                  username={prompt.username}
                   prompt={prompt.prompt}
                   modified={prompt.modified}
                   tags={prompt.tags}
