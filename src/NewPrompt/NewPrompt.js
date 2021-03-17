@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import MultiSelect from "react-multi-select-component";
 import { useAuth0 } from "@auth0/auth0-react";
-import API_BASE_URL from "../config"
+import API_BASE_URL from "../config";
 import PromptLandContext from "../PromptLandContext";
 
 const NewPrompt = () => {
@@ -29,14 +29,14 @@ const NewPrompt = () => {
     { label: "Music", value: "16" },
   ];
 
-  const tagsArray =[]
+  const tagsArray = [];
 
   selected.map((tag) => {
     let tagValue = tag.value.toLowerCase();
     tagsArray.push(tagValue);
   });
 
-  const tagStrings = tagsArray.join(', ')
+  const tagStrings = tagsArray.join(", ");
 
   const handleSubmit = async (e) => {
     e.preventDefault();

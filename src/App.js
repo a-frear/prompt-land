@@ -12,10 +12,9 @@ import UserPrompts from "./UserPrompts/UserPrompts";
 import landscape from "./img/landscape.jpg";
 import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
-const {API_BASE_URL} = require('./config');
+const { API_BASE_URL } = require("./config");
 
 class App extends Component {
-
   state = {
     prompts: [],
     error: null,
