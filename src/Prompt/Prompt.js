@@ -35,7 +35,7 @@ class Prompt extends Component {
     return (
       <div className="Prompt">
         <h2 className="user_name">
-          <Link className="username" to={`/users/${username}`}>
+          <Link className="app_title" to={`/users/${username}`}>
             {username}
           </Link>
         </h2>
