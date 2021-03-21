@@ -7,16 +7,19 @@ const FollowButton = (props) => {
   // "following_user": ${followsUser}`;
   const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
   const { following, setFollowing } = useState([]);
-  // const { isFollowing, setIsFollowing } = useState(following.includes);
+  const { isFollowing, setIsFollowing } = useState(false);
 
   //check to see if user is following following_user
   useEffect(() => {
-    if (following.length !== 0) {
+    const forUser = {
+      username: user.nickname
+    };
     fetch(`https://shielded-inlet-60576.herokuapp.com/api/followers`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
       },
+      body: JSON.stringify(forUser), 
     })
       .then((res) => {
         if (!res.ok) {
@@ -30,23 +33,15 @@ const FollowButton = (props) => {
       .catch((error) => {
         console.error({ error });
       });
-    }
-  }, [following]);
 
-  // useEffect(() => {
-  //   const followingArray = following;
-  //   const followingCheck = `"username": ${user},
-  // "following_user": ${followsUser}`;
-  //   console.log(followingArray);
-  //   if (
-  //     followingArray.map((follows) => {
-  //       follows.includes(followingCheck);
-  //     })
-  //   ) {
-  //     setIsFollowing(true);
-  //   }
-  //   console.log(isFollowing);
-  // });
+      if (
+        following.map((follows) => {
+        follows.includes(followsUser)
+      })
+      ) {
+        setIsFollowing(true)
+      }
+  }, []);
 
   const handleFollow = async (e) => {
     e.preventDefault();
