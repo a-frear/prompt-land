@@ -13,28 +13,29 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 15px;
-  align-items: center;
 }
 
 .app_title {
   text-transform: lowercase;
   letter-spacing: 3px;
   font-size: 24px;
-  margin: 15px;
+  margin: -55px 15px -10px 15px;
   color: #2e2e3a;
   text-decoration: none;
+  line-height: 60px;
+  padding-bottom: 0px;
 }
 
-.landscape-img {
+.landscape-img, .landscape-mirror-img {
   max-width: 300px;
-  margin: 50px 0px -30px 15px;
+  margin: 50px 0px 25px 15px;
 }
 
 /*** USER NAV (PROFILE AND POST LINKS) ****/
 .userNav-header {
   font-size: 24px;
   text-transform: none;
-  margin-top: -50px;
+  margin-top: -10px;
 }
 
 .userNavUL {
@@ -55,8 +56,13 @@ body {
 
 /*** PROMPT CARD *****/
 
-.user_name {
-  color: #bc5d2e;
+.username {
+  color: #e93c0c;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 38px;
+  letter-spacing: 3px;
+
 }
 
 .prompt_content {
@@ -72,6 +78,7 @@ body {
   margin: 50px;
   padding: 30px;
   max-width: 500px;
+  min-width: 500px;
   border: solid 3px #2e2e3a;
 }
 
@@ -166,6 +173,11 @@ li {
   justify-content: space-around;
 }
 
+.prompts-by {
+  font-size: 40px;
+  margin: 40px 0px -15px 0px;
+}
+
 /********* USER PROMPTS **********/
 .prompts-by {
   text-align: center;
@@ -186,6 +198,7 @@ li {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 35px;
 }
 
 .discover-label {
@@ -195,4 +208,112 @@ li {
   max-width: 600px;
   min-width: 250px;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .landscape-mirror-img {
+    display: none;
+  }
+
+  .landscape-img {
+    display: flex;
+    max-width: 250px;
+  }
+
+  .Prompt {
+    max-width: 400px;
+    min-width: 400px;
+  }
+
+  .tag_list {
+    flex-direction: column;
+    font-size: 24px;
+    align-items: flex-end;
+  }
+  .prompt-feed-list {
+    margin-left: -30px;
+  }
+  
+  
+}
+
+@media (max-width: 720px) {
+  .App-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .log_button {
+    text-align: left;
+    margin-left: 0px;
+    font-size: 24px;
+    color: #e93c0c;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .Prompt {
+    max-width: 300;
+    min-width: 300px;
+    margin: 5px;
+    border: solid 2px #2e2e3a;
+  }
+
+  .prompt-feed-list {
+    margin-left: -35px;
+  }
+
+  .prompts-by {
+    font-size: 30px;
+    margin: 50px 0px 15px 45px;
+  } 
+
+
+}
+
+@media (max-width: 420px) {
+  .app_title {
+    font-size: 20px;
+  }
+
+  .Prompt {
+    max-width: 200px;
+    min-width: 200px;
+    margin-top: 15px;
+    padding: 8px;
+  }
+
+.username {
+  font-size: 24px;
+}
+
+.prompt_content {
+    font-size: 38px;
+}
+
+
+.landscape-img {
+  display: flex;
+  max-width: 200px;
+}
+
+.prompt-feed-list {
+  margin-left: -38px;
+}
+
+.userNav-header {
+  margin-top: -25px;
+}
+
+.nav-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+}
+
+textarea {
+  max-width: 225px;
+}
 }

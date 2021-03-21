@@ -60,7 +60,7 @@ class App extends Component {
             <img
               src={landscapeMirror}
               alt="prompt land mirror landscape"
-              className="landscape-img"
+              className="landscape-mirror-img"
             />
           </div>
           <header className="App-header">

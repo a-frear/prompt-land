@@ -28,7 +28,7 @@ const Navigation = styled.header`
   .nav ul {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: -15px;
 }
 
 .nav li {
@@ -42,15 +42,13 @@ li:hover {
     color: #f73bb2;
 }
 
-
-
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 720px) {
     height: auto;
-    min-height: 50px;
     display: block;
-    position: relative;
+    position: initial;
     
     .fa-bars {
+      margin-top: 10px;
       display: inline-block;
       position: absolute;
       top: 10px;
@@ -65,19 +63,21 @@ li:hover {
       flex-wrap: wrap;
       overflow: hidden;
       max-height: 0;
+      position: initial;
       
 
       &.is-expanded {
         overflow: hidden;
-        max-height: 500px; /* approximate max height */
+        max-height: 200px; /* approximate max height */
       }
-      li {
+       li {
         padding: 15px 10px;
         margin: 0px 0px;
         width: 100%;
+        font-size: 24px;
+        color: #e93c0c;
       }
     }
-  }
 `;
 
 class Nav extends Component {
@@ -97,7 +97,6 @@ class Nav extends Component {
     const { isExpanded } = this.state;
 
     return (
-      <div>
         <Navigation>
           <nav className="nav">
             <i
@@ -106,14 +105,6 @@ class Nav extends Component {
               onClick={(e) => this.handleToggle(e)}
             />
             <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-              {/* <NavLink
-              activeClassName="active"
-              className="navigation-link"
-              to="/home"
-              onClick={(e) => this.handleToggle(e)}
-            >
-              <li>+</li>
-            </NavLink> */}
               <NavLink
                 activeClassName="active"
                 className="navigation-link"
@@ -122,20 +113,11 @@ class Nav extends Component {
               >
                 <li>Discover</li>
               </NavLink>
-              {/* <NavLink
-              activeClassName="active"
-              className="navigation-link"
-              to="/profile"
-              onClick={(e) => this.handleToggle(e)}
-            >
-              <li>Profile</li>
-            </NavLink> */}
               <LoginButton />
               <LogoutButton />
             </ul>
           </nav>
         </Navigation>
-      </div>
     );
   }
 }

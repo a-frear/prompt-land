@@ -17,7 +17,7 @@ const Profile = () => {
     isAuthenticated && (
       <div className="profile">
         <div className="profile-header">
-          <h2>{user.nickname}</h2>
+          <h2 className='prompts-by'>{user.given_name}'s prompts</h2>
           {/* <JSONPretty data={user} />
         {JSON.stringify(user, null, 2)} */}
         </div>
