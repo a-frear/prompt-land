@@ -35,7 +35,7 @@ class Prompt extends Component {
     return (
       <div className="Prompt">
         <h2 className="user_name">
-          <Link className="app_title" to={`/users/${username}`}>
+          <Link className="username" to={`/users/${username}`}>
             {username}
           </Link>
         </h2>
@@ -45,7 +45,7 @@ class Prompt extends Component {
           {tags.map((tag) => (
             <li key={tag}>
               <Link className="tag-link" to={`/tags/${tag}`}>
-              #{tag}
+                #{tag}
               </Link>
             </li>
           ))}
