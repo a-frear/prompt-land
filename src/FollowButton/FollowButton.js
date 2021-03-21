@@ -27,8 +27,8 @@ const FollowButton = (props) => {
         }
         return res.json();
       })
-      .then((follower) => {
-        setFollowing([...following, follower]);
+      .then((res) => {
+        setFollowing(res);
       })
       .catch((error) => {
         console.error({ error });
