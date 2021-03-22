@@ -3,6 +3,7 @@ import AOS from "aos";
 import React, { useState, useEffect, useContext } from "react";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import PromptLandContext from "../PromptLandContext";
+import config from '../config'
 
 const FollowingFeed = (props) => {
   const { isAuthenticated, user } = useAuth0();
@@ -13,8 +14,7 @@ const FollowingFeed = (props) => {
   //check to see if user is following following_user
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(
-      `https://shielded-inlet-60576.herokuapp.com/api/followers/all/${forUser}`,
+    fetch(config.API_BASE_URL + `/all/${forUser}`,
       {
         method: "GET",
         headers: {
