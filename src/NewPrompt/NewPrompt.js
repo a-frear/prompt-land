@@ -78,7 +78,7 @@ const NewPrompt = () => {
         <form className="new-prompt-form" onSubmit={(e) => handleSubmit(e)}>
           <label className="new-prompt-label">Prompt:</label>
           <h4 className="char-limit">200 character limit</h4>
-          <h3>Promting as ${user.nickname}</h3>
+          <h3>Prompting as ${user.nickname}</h3>
           <textarea
             type="text"
             id="new-prompt-textarea"
