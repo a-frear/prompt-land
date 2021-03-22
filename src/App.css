@@ -157,6 +157,7 @@ body {
 
 .char-limit {
   margin-top: 5px;
+  margin-bottom: -15px;
 }
 
 .prompting-as {
