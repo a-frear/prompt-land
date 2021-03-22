@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import PromptLandContext from "../PromptLandContext";
 import Prompt from "../Prompt/Prompt";
 
@@ -38,4 +38,7 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default withAuthenticationRequired(Profile, {
+  returnTo: '/profile'
+});
+
