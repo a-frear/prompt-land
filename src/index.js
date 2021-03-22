@@ -10,7 +10,7 @@ const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 ReactDOM.render(
-  <BrowserRouter forceRefresh={true}  >
+  <BrowserRouter>
     <Auth0Provider
       domain={domain}
       clientId={clientId}
