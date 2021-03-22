@@ -191,6 +191,13 @@ li {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+  background-color: #2e2e3a;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  font-family: "Newsreader", serif;
 }
 
 /********** DISCOVER *****************/
@@ -199,7 +206,7 @@ li {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 50px;
 }
 
 .discover-label {
