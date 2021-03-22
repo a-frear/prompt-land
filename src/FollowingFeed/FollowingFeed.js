@@ -1,14 +1,12 @@
 import Prompt from "../Prompt/Prompt";
 import AOS from "aos";
 import React, { useState, useEffect, useContext } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import PromptLandContext from "../PromptLandContext";
 
 const FollowingFeed = (props) => {
-  const followsUser = props.followUser;
-  const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
   const [following, setFollowing] = useState([]);
-  const [isFollowing, setIsFollowing] = useState();
   const [followersPrompts, setFollowersPrompts] = useState([]);
   const { prompts } = useContext(PromptLandContext);
 
