@@ -30,12 +30,12 @@ const NewPrompt = () => {
     { label: "Music", value: "16" },
   ];
 
-  const tagsArray = [];
+
 
   const history = useHistory();
 
-  selected.map((tag) => {
-    tagsArray.push(tag.value);
+  const tagsArray = selected.map(tag => {
+    tag.value;
   });
 
   const handleSubmit = async (e) => {
