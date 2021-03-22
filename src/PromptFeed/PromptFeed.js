@@ -22,10 +22,14 @@ class PromptFeed extends Component {
     // const { prompts=[] } = this.props.prompts
     // const promptsForFeed = getPromptsFromFriends(notes, user_id)
 
+    const newestPrompts = prompts.sort(
+      (a, b) => Date.parse(b.modified) - Date.parse(a.modified)
+    );
+
     return (
       <section className="PromptFeed">
         <ul className="prompt-feed-list">
-          {prompts.map((prompt) => (
+          {newestPrompts.map((prompt) => (
             <li key={prompt.id}>
               <div data-aos="fade-down">
                 <Prompt

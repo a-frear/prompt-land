@@ -42,7 +42,7 @@ const NewPrompt = () => {
       username: user.nickname,
       prompt: e.target["new-prompt-textarea"].value,
       modified: new Date(),
-      tag_id: tagsArray
+      tag_id: tagsArray,
     };
     e.target["new-prompt-textarea"].value = "";
     fetch(`https://shielded-inlet-60576.herokuapp.com/api/prompts`, {
@@ -51,7 +51,7 @@ const NewPrompt = () => {
         "content-type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(newPrompt), 
+      body: JSON.stringify(newPrompt),
     })
       .then((res) => {
         if (!res.ok) return res.json().then((e) => Promise.reject(e));

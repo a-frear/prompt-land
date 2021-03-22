@@ -97,27 +97,27 @@ class Nav extends Component {
     const { isExpanded } = this.state;
 
     return (
-        <Navigation>
-          <nav className="nav">
-            <i
-              className="fa fa-bars"
-              aria-hidden="true"
+      <Navigation>
+        <nav className="nav">
+          <i
+            className="fa fa-bars"
+            aria-hidden="true"
+            onClick={(e) => this.handleToggle(e)}
+          />
+          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+            <NavLink
+              activeClassName="active"
+              className="navigation-link"
+              to="/discover"
               onClick={(e) => this.handleToggle(e)}
-            />
-            <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-              <NavLink
-                activeClassName="active"
-                className="navigation-link"
-                to="/discover"
-                onClick={(e) => this.handleToggle(e)}
-              >
-                <li>Discover</li>
-              </NavLink>
-              <LoginButton />
-              <LogoutButton />
-            </ul>
-          </nav>
-        </Navigation>
+            >
+              <li>Discover</li>
+            </NavLink>
+            <LoginButton />
+            <LogoutButton />
+          </ul>
+        </nav>
+      </Navigation>
     );
   }
 }

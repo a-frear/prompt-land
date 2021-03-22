@@ -12,6 +12,7 @@ import UserPrompts from "./UserPrompts/UserPrompts";
 import landscape from "./img/landscape.jpg";
 import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
+import FollowingFeed from "./FollowingFeed/FollowingFeed";
 const { API_BASE_URL } = require("./config");
 
 class App extends Component {
@@ -78,6 +79,7 @@ class App extends Component {
           <Route path="/tags/:tagId" component={TagFeed} />
           <Route path="/users/:userId" component={UserPrompts} />
           <Route path="/discover" component={Discover} />
+          <Route path="/following" component={FollowingFeed} />
         </div>
       </PromptLandContext.Provider>
     );

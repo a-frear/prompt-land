@@ -27,7 +27,8 @@ body {
   padding-bottom: 0px;
 }
 
-.landscape-img, .landscape-mirror-img {
+.landscape-img,
+.landscape-mirror-img {
   max-width: 300px;
   margin: 50px 0px 25px 15px;
 }
@@ -37,11 +38,15 @@ body {
   font-size: 24px;
   text-transform: none;
   margin-top: -10px;
+  opacity: 60%;
 }
 
 .userNavUL {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .navigation-link-user {
@@ -63,7 +68,6 @@ body {
   text-transform: lowercase;
   font-size: 38px;
   letter-spacing: 3px;
-
 }
 
 .prompt_content {
@@ -85,14 +89,16 @@ body {
 
 .tag_list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 24px;
+  align-items: flex-end;
 }
 
 .tag-link {
   text-decoration: none;
   color: #2e2e3a;
+  margin-left: -35px;
 }
 
 /*** NEW PROMPT  *****/
@@ -179,8 +185,9 @@ li {
 }
 
 .prompts-by {
-  font-size: 40px;
-  margin: 40px 0px -15px 0px;
+  font-size: 32px;
+  margin: 40px 0px 0px -25px;
+  font-weight: 100;
 }
 
 /********* USER PROMPTS **********/
@@ -237,22 +244,14 @@ li {
     min-width: 400px;
   }
 
-  .tag_list {
-    flex-direction: column;
-    font-size: 24px;
-    align-items: flex-end;
-  }
   .prompt-feed-list {
     margin-left: -30px;
   }
-  
-  
 }
 
 @media (max-width: 720px) {
   .App-header {
     display: flex;
-    flex-direction: column;
   }
 
   .log_button {
@@ -261,12 +260,11 @@ li {
     font-size: 24px;
     color: #e93c0c;
   }
-
 }
 
 @media (max-width: 600px) {
   .Prompt {
-    max-width: 300;
+    max-width: 300px;
     min-width: 300px;
     margin: 5px;
     border: solid 2px #2e2e3a;
@@ -279,9 +277,7 @@ li {
   .prompts-by {
     font-size: 30px;
     margin: 50px 0px 15px 45px;
-  } 
-
-
+  }
 }
 
 @media (max-width: 420px) {
@@ -293,38 +289,38 @@ li {
     max-width: 250px;
     min-width: 250px;
     margin-top: 15px;
+    padding: 8px;
   }
 
-.username {
-  font-size: 24px;
-}
+  .username {
+    font-size: 24px;
+  }
 
-.prompt_content {
+  .prompt_content {
     font-size: 38px;
-}
+  }
 
+  .landscape-img {
+    display: flex;
+    max-width: 200px;
+  }
 
-.landscape-img {
-  display: flex;
-  max-width: 200px;
-}
+  .prompt-feed-list {
+    margin-left: -38px;
+  }
 
-.prompt-feed-list {
-  margin-left: -38px;
-}
+  .userNav-header {
+    margin-top: -25px;
+  }
 
-.userNav-header {
-  margin-top: -25px;
-}
+  .nav-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+  }
 
-.nav-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -50px;
-}
-
-textarea {
-  max-width: 225px;
-}
+  textarea {
+    max-width: 225px;
+  }
 }
