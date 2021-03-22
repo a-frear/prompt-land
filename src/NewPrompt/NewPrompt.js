@@ -79,6 +79,7 @@ const NewPrompt = () => {
         ></textarea>
         <label className="new-prompt-label">Tags:</label>
         <MultiSelect
+          className="multiselect"
           options={options}
           value={selected}
           onChange={setSelected}
