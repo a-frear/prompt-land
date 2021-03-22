@@ -6,13 +6,11 @@ import PromptLandContext from "../PromptLandContext";
 class DiscoverList extends Component {
   static contextType = PromptLandContext;
   render() {
-    const tagsArray = [];
-    this.props.tags.map((tag) => {
-      let tagLabel = tag.label.toLowerCase();
-      tagsArray.push(tagLabel);
+    tagsArray = this.props.tags.map((tag) => {
+      tag.label.toLowerCase();
     });
     const { prompts = [] } = this.context;
-    //figure out how to includes can be used with an array of words
+    
     function contains(target, pattern) {
       let value = 0;
       pattern.forEach(function (word) {
