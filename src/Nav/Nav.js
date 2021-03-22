@@ -76,11 +76,6 @@ li:hover {
       font-size: 24px;
       color: #e93c0c;
     }
-    .navigation-link{
-      .nav ul {
-        margin-top: 30px;
-      }
-    }
   }
 `;
 
