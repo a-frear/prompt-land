@@ -13,6 +13,7 @@ import landscape from "./img/landscape.jpg";
 import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
 import FollowingFeed from "./FollowingFeed/FollowingFeed";
+import LoginButton from "./LoginButton/LoginButton";
 const { API_BASE_URL } = require("./config");
 
 class App extends Component {
@@ -80,6 +81,7 @@ class App extends Component {
           <Route path="/users/:userId" component={UserPrompts} />
           <Route path="/discover" component={Discover} />
           <Route path="/following" component={FollowingFeed} />
+          <Route path="/login" component={LoginButton} />
         </div>
       </PromptLandContext.Provider>
     );
