@@ -14,7 +14,7 @@ import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
 import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
-import config from '../config'
+import { API_BASE_URL } from '../config'
 
 class App extends Component {
   state = {
