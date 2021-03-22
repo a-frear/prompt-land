@@ -41,7 +41,7 @@ const NewPrompt = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     function goHome() {
-      history.go("/");
+      history.go("/profile");
     }
     const token = await getAccessTokenSilently();
     const newPrompt = {
