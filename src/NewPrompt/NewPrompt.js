@@ -3,7 +3,7 @@ import MultiSelect from "react-multi-select-component";
 import { useAuth0 } from "@auth0/auth0-react";
 import API_BASE_URL from "../config";
 import PromptLandContext from "../PromptLandContext";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 const NewPrompt = () => {
   const [selected, setSelected] = useState([]);
@@ -32,7 +32,7 @@ const NewPrompt = () => {
 
   const tagsArray = [];
 
-  const history = useHistory()
+  const history = useHistory();
 
   selected.map((tag) => {
     tagsArray.push(tag.value);
@@ -40,9 +40,9 @@ const NewPrompt = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    function goHome(){
-      history.go('/')
-    } 
+    function goHome() {
+      history.go("/");
+    }
     const token = await getAccessTokenSilently();
     const newPrompt = {
       username: user.nickname,
@@ -74,31 +74,31 @@ const NewPrompt = () => {
 
   return (
     isAuthenticated && (
-    <div className="new-prompt">
-      <form className="new-prompt-form" onSubmit={(e) => handleSubmit(e)}>
-        <label className="new-prompt-label">Prompt:</label>
-        <h4 className="char-limit">200 character limit</h4>
-        <textarea
-          type="text"
-          id="new-prompt-textarea"
-          name="new-prompt-textarea"
-          maxLength="200"
-          required
-        ></textarea>
-        <label className="new-prompt-label">Tags:</label>
-        <MultiSelect
-          className="multiselect"
-          options={options}
-          value={selected}
-          onChange={setSelected}
-          labelledBy={"Select"}
-          hasSelectAll={false}
-        />
-        <div>
-          <button className="new-prompt-submit">Submit</button>
-        </div>
-      </form>
-    </div>
+      <div className="new-prompt">
+        <form className="new-prompt-form" onSubmit={(e) => handleSubmit(e)}>
+          <label className="new-prompt-label">Prompt:</label>
+          <h4 className="char-limit">200 character limit</h4>
+          <textarea
+            type="text"
+            id="new-prompt-textarea"
+            name="new-prompt-textarea"
+            maxLength="200"
+            required
+          ></textarea>
+          <label className="new-prompt-label">Tags:</label>
+          <MultiSelect
+            className="multiselect"
+            options={options}
+            value={selected}
+            onChange={setSelected}
+            labelledBy={"Select"}
+            hasSelectAll={false}
+          />
+          <div>
+            <button className="new-prompt-submit">Submit</button>
+          </div>
+        </form>
+      </div>
     )
   );
 };

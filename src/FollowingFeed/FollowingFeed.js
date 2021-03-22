@@ -1,5 +1,3 @@
-// import PromptLandContext from '../PromptLandContext';
-// import { getPromptsFromFriends } from '../prompts-helpers';
 import Prompt from "../Prompt/Prompt";
 import AOS from "aos";
 import React, { useState, useEffect, useContext } from "react";
@@ -55,33 +53,29 @@ const FollowingFeed = (props) => {
   AOS.init({
     delay: 200,
   });
-  // const { user_id } = this.props.match.params
-  // const { prompts=[] } = this.props.prompts
-  // const promptsForFeed = getPromptsFromFriends(notes, user_id)
-
   return (
     isAuthenticated && (
-    <section className="PromptFeed">
-      <div className="profile-header">
-        <h2 className="prompts-by">Prompts from friends</h2>
-      </div>
-      <ul className="prompt-feed-list">
-        {followersPrompts.map((prompt) => (
-          <li key={prompt.id}>
-            <div data-aos="fade-down">
-              <Prompt
-                id={prompt.id}
-                username={prompt.username}
-                prompt={prompt.prompt}
-                modified={prompt.modified}
-                tags={prompt.tags}
-              />
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )
+      <section className="PromptFeed">
+        <div className="profile-header">
+          <h2 className="prompts-by">Prompts from friends</h2>
+        </div>
+        <ul className="prompt-feed-list">
+          {followersPrompts.map((prompt) => (
+            <li key={prompt.id}>
+              <div data-aos="fade-down">
+                <Prompt
+                  id={prompt.id}
+                  username={prompt.username}
+                  prompt={prompt.prompt}
+                  modified={prompt.modified}
+                  tags={prompt.tags}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
   );
 };
 

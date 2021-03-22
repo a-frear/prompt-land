@@ -32,7 +32,6 @@ body {
 .landscape-mirror-img {
   max-width: 300px;
   margin: 50px 0px 25px 15px;
-  
 }
 
 /*** USER NAV (PROFILE AND POST LINKS) ****/
@@ -104,18 +103,24 @@ body {
   position: relative;
 }
 .Prompt:after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(-1 * var(--borderWidth));
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #211103, #75704e, #e93c0c, #5f524a, #211103);
+  background: linear-gradient(
+    60deg,
+    #211103,
+    #75704e,
+    #e93c0c,
+    #5f524a,
+    #211103
+  );
   z-index: -1;
   animation: animatedgradient 4s ease alternate infinite;
   background-size: 300% 300%;
 }
-
 
 @keyframes animatedgradient {
   0% {
@@ -128,7 +133,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
 
 /*** NEW PROMPT  *****/
 
@@ -272,7 +276,6 @@ li {
     margin-bottom: 30px;
   }
 
-
   .Prompt {
     max-width: 400px;
     min-width: 400px;
@@ -297,7 +300,6 @@ li {
 }
 
 @media (max-width: 600px) {
-
   .Prompt {
     max-width: 300px;
     min-width: 300px;

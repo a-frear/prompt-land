@@ -2,31 +2,6 @@ import { React, Component } from "react";
 import { Link } from "react-router-dom";
 
 class Prompt extends Component {
-  // static defaultProps ={
-  //     onDeletePrompt: () => {},
-  //     history: {
-  //         goBack: () => {},
-  //       },
-  //   }
-  // static contextType = PromptContext;
-  // handleClickDelete = e => {
-  // e.preventDefault()
-  // const PromptId = this.props.id
-
-  // fetch(config.API_ENDPOINT_notes + `/${noteId}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //     'content-type': 'application/json'
-  //     },
-  // })
-  //     .then(() => {
-  //     this.context.deletePrompt(promptId)
-  //     })
-  //     .catch(error => {
-  //     console.error({ error })
-  //     })
-  // }
-
   render() {
     const { prompt, modified, username, tags } = this.props;
     const splitDate = modified.split("");

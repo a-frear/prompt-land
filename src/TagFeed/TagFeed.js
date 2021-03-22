@@ -1,6 +1,4 @@
 import { React, Component } from "react";
-// import PromptLandContext from '../PromptLandContext';
-// import { getPromptsFromFriends } from '../prompts-helpers';
 import Prompt from "../Prompt/Prompt";
 import AOS from "aos";
 import PromptLandContext from "../PromptLandContext";
@@ -21,10 +19,6 @@ class TagFeed extends Component {
     AOS.init({
       delay: 200,
     });
-    // const { user_id } = this.props.match.params
-    // const { prompts=[] } = this.props.prompts
-    // const promptsForFeed = getPromptsFromFriends(notes, user_id)
-
     return (
       <section className="PromptFeed">
         <ul className="prompt-feed-list">

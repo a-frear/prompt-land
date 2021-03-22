@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-// import JSONPretty from 'react-json-pretty';
 import PromptLandContext from "../PromptLandContext";
 import Prompt from "../Prompt/Prompt";
 
@@ -18,8 +17,6 @@ const Profile = () => {
       <div className="profile">
         <div className="profile-header">
           <h2 className="prompts-by">{user.given_name}'s prompts</h2>
-          {/* <JSONPretty data={user} />
-        {JSON.stringify(user, null, 2)} */}
         </div>
         <div className="users-prompts">
           <ul>
