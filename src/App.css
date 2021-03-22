@@ -160,8 +160,7 @@ body {
 }
 
 .prompting-as {
-  color: #e93c0c;
-  text-transform: lowercase;
+  font-weight: 100;
 }
 
 #new-prompt-textarea {
