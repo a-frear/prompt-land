@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom"
 
 const NewPrompt = () => {
   const [selected, setSelected] = useState([]);
-  const { user, getAccessTokenSilently } = useAuth0();
+  const { user, getAccessTokenSilently, isAuthenticated } = useAuth0();
   const [prompts, setPrompts] = useState([]);
   useContext(PromptLandContext);
 
@@ -73,6 +73,7 @@ const NewPrompt = () => {
   };
 
   return (
+    isAuthenticated && (
     <div className="new-prompt">
       <form className="new-prompt-form" onSubmit={(e) => handleSubmit(e)}>
         <label className="new-prompt-label">Prompt:</label>
@@ -98,6 +99,7 @@ const NewPrompt = () => {
         </div>
       </form>
     </div>
+    )
   );
 };
 

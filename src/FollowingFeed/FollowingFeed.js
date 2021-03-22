@@ -60,6 +60,7 @@ const FollowingFeed = (props) => {
   // const promptsForFeed = getPromptsFromFriends(notes, user_id)
 
   return (
+    isAuthenticated && (
     <section className="PromptFeed">
       <div className="profile-header">
         <h2 className="prompts-by">Prompts from friends</h2>
@@ -80,6 +81,7 @@ const FollowingFeed = (props) => {
         ))}
       </ul>
     </section>
+  )
   );
 };
 
