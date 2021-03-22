@@ -79,4 +79,6 @@ const FollowingFeed = (props) => {
   );
 };
 
-export default FollowingFeed;
+export default withAuthenticationRequired(FollowingFeed, {
+  returnTo: '/following'
+});
