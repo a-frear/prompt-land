@@ -33,7 +33,7 @@ const FollowButton = (props) => {
   }, []);
 
   useEffect(() => {
-    let followingArray = following.map((f) => {
+    const followingArray = following.map((f) => {
       f.followee;
     });
     console.log(followingArray);
