@@ -33,9 +33,8 @@ const FollowButton = (props) => {
   }, []);
 
   useEffect(() => {
-    let followingArray = [];
-    following.map((f) => {
-      followingArray.push(f.followee);
+    let followingArray = following.map((f) => {
+      f.followee;
     });
     console.log(followingArray);
     followingArray.includes(userToFollow)
