@@ -90,6 +90,7 @@ const FollowButton = (props) => {
     })
       .then(setIsFollowing(false))
       .then(history.push(`/`))
+      .then(alert('User unfollowed!'))
       .catch((error) => {
         console.error({ error });
       });
