@@ -16,12 +16,6 @@ const Navigation = styled.header`
 .navigation-link {
     color: #F73BB2;
   }
-  .fa-bars {
-    display: none;
-    color: black;
-    font-size: 2rem;
-  }
-
 
 }
 
@@ -42,41 +36,24 @@ li:hover {
     color: #f73bb2;
 }
 
-// @media only screen and (max-width: 720px) {
-//   height: auto;
-//   display: block;
-//   position: initial;
-  
-//   .fa-bars {
-//     margin-top: 10px;
-//     display: inline-block;
-//     position: absolute;
-//     top: 10px;
-//     right: 10px;
-//     cursor: pointer;
-//   }
-//   ul.collapsed {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     overflow: hidden;
-//     max-height: 0;
-//     position: initial;
-    
-//     &.is-expanded {
-//       overflow: hidden;
-//       max-height: 200px; /* approximate max height */
-//     }
-//      li {
-//       padding: 15px 10px;
-//       margin: 0px 0px;
-//       width: 100%;
-//       font-size: 24px;
-//       color: #e93c0c;
-//     }
-//   }
+@media only screen and (max-width: 700px) {
+  .nav ul {
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+} 
+.nav li {
+  font-size: 24px;
+  text-style: none;
+  margin-left: 0px;
+}
+@media only screen and (max-width: 400px) {
+  .nav ul {
+    margin-top: 50px;
+    margin-left: -250px;
+    display: flex;
+    flex-direction: row;
+} 
 `;
 
 class Nav extends Component {
@@ -98,12 +75,7 @@ class Nav extends Component {
     return (
       <Navigation>
         <nav className="nav">
-          <i
-            className="fa fa-bars"
-            aria-hidden="true"
-            onClick={(e) => this.handleToggle(e)}
-          />
-          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+          <ul>
             <NavLink
               activeClassName="active"
               className="navigation-link"

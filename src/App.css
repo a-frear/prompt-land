@@ -268,15 +268,6 @@ li {
 }
 
 @media (max-width: 800px) {
-  .landscape-mirror-img {
-    display: none;
-  }
-
-  .landscape-img {
-    display: flex;
-    max-width: 250px;
-  }
-
   .app_title {
     margin-bottom: 30px;
   }
@@ -291,17 +282,29 @@ li {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 700px) {
+  .landscape-mirror-img {
+    display: none;
+  }
+
+  .landscape-img {
+    display: flex;
+    max-width: 250px;
+  }
   .App-header {
     display: flex;
   }
-
   .log_button {
-    text-align: left;
+    margin-top: 10px;
     margin-left: 0px;
     font-size: 24px;
     color: #e93c0c;
   }
+
+}
+
+@media (max-width: 600px) {
+
 }
 
 @media (max-width: 600px) {
@@ -320,6 +323,13 @@ li {
     font-size: 30px;
     margin: 50px 0px 15px 45px;
   }
+}
+@media (max-width: 400px) {
+  .log_button {
+    margin-top: -10px;
+    font-size: 24px;
+  }
+
 }
 
 @media (max-width: 420px) {
@@ -365,4 +375,18 @@ li {
   textarea {
     max-width: 225px;
   }
+}
+
+@media (max-width: 290px) {
+  .app_title {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 268px) {
+  .app_title {
+    font-size: 14px;
+  }
+
 }
