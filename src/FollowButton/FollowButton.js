@@ -89,7 +89,7 @@ const FollowButton = (props) => {
       },
     })
       .then(setIsFollowing(false))
-      .then(history.go(`/following`))
+      .then(history.push(`/`))
       .catch((error) => {
         console.error({ error });
       });
