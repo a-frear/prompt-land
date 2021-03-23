@@ -36,7 +36,7 @@ const FollowingFeed = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log('hi');
+    console.log(following);
     const followingArray = following.map((f) => {
       return f.followee
     });
