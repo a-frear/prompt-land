@@ -3,7 +3,7 @@ import AOS from "aos";
 import React, { useState, useEffect, useContext } from "react";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import PromptLandContext from "../PromptLandContext";
-import { API_BASE_URL } from '../config'
+import config from '../config'
 
 const FollowingFeed = (props) => {
   const { isAuthenticated, user } = useAuth0();
@@ -14,7 +14,7 @@ const FollowingFeed = (props) => {
   //check to see if user is following followee
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${API_BASE_URL}/follower/${forUser}`,
+    fetch(`${config.API_BASE_URL}/follower/${forUser}`,
       {
         method: "GET",
         headers: {

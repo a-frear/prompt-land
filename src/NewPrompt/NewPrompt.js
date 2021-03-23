@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import MultiSelect from "react-multi-select-component";
 import { useAuth0 } from "@auth0/auth0-react";
-import { API_BASE_URL } from '../config'
+import config from '../config'
 import PromptLandContext from "../PromptLandContext";
 import { useHistory } from "react-router-dom";
 
@@ -51,7 +51,7 @@ const NewPrompt = () => {
       tag_id: tagsArray,
     };
     e.target["new-prompt-textarea"].value = "";
-    fetch(`${API_BASE_URL}/prompts`, {
+    fetch(`${config.API_BASE_URL}/prompts`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
