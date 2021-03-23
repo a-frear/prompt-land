@@ -45,6 +45,10 @@ const FollowButton = (props) => {
     console.log(isFollowing);
   }, [following]);
 
+  useEffect(() => {
+    history.push(`/users/${userToFollow}`)
+  }, [isFollowing]);
+
   const handleFollow = async (e) => {
     e.preventDefault();
 
@@ -89,7 +93,6 @@ const FollowButton = (props) => {
       },
     })
       .then(setIsFollowing(false))
-      .then(history.push(`/users/${userToFollow}`))
       .catch((error) => {
         console.error({ error });
       });
