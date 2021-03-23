@@ -14,7 +14,7 @@ import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
 import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
-import { API_BASE_URL } from './config'
+import config from './config';
 
 class App extends Component {
   state = {
@@ -30,7 +30,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch(`${API_BASE_URL}/prompts`, {
+    fetch(`${config.API_BASE_URL}/prompts`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { API_BASE_URL } from '../config'
+import config from '../config';
 
 const FollowButton = (props) => {
   const userToFollow = props.followUser;
@@ -11,7 +11,7 @@ const FollowButton = (props) => {
   //check to see if user is following userToFollow
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${API_BASE_URL}/follower/${forUser}`,
+    fetch(`${config.API_BASE_URL}/follower/${forUser}`,
       {
         method: "GET",
         headers: {
@@ -51,7 +51,7 @@ const FollowButton = (props) => {
       username: user.nickname,
       followee: userToFollow,
     };
-    fetch(`https://shielded-inlet-60576.herokuapp.com/api/followers`, {
+    fetch(`${config.API_BASE_URL}/followers`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -80,7 +80,7 @@ const FollowButton = (props) => {
         id = f.id;
       }
     });
-    fetch(`https://shielded-inlet-60576.herokuapp.com/api/followers/${id}`, {
+    fetch(`${config.API_BASE_URL}/followers/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
