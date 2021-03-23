@@ -12,7 +12,7 @@ const FollowButton = (props) => {
 
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${config.API_BASE_URL}followers/follower/${forUser}`,
+    fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`,
       {
         method: "GET",
         headers: {
