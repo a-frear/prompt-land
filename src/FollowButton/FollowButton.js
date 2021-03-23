@@ -89,7 +89,7 @@ const FollowButton = (props) => {
       },
     })
       .then(setIsFollowing(false))
-      .then(history.go(`/users/${userToFollow}`))
+      .then(history.go(`/following`))
       .catch((error) => {
         console.error({ error });
       });
@@ -112,4 +112,4 @@ const FollowButton = (props) => {
   );
 };
 
-export default FollowButton;
+export default FollowButton
