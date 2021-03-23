@@ -11,7 +11,7 @@ const FollowButton = (props) => {
   //check to see if user is following userToFollow
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${API_BASE_URL}/all/${forUser}`,
+    fetch(`${API_BASE_URL}/follower/${forUser}`,
       {
         method: "GET",
         headers: {
