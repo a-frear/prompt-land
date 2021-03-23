@@ -7,8 +7,8 @@ const FollowButton = (props) => {
   const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
   const [following, setFollowing] = useState([]);
   const [isFollowing, setIsFollowing] = useState();
+  const history = useHistory();
 
-  //check to see if user is following userToFollow
   useEffect(() => {
     const forUser = user.nickname;
     fetch(`${config.API_BASE_URL}followers/follower/${forUser}`,
@@ -88,7 +88,7 @@ const FollowButton = (props) => {
       },
     })
       .then(setIsFollowing(false))
-      .then(console.log)
+      .then(history.push("/"))
       .catch((error) => {
         console.error({ error });
       });
