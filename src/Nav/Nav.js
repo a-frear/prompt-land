@@ -50,7 +50,7 @@ li:hover {
 @media only screen and (max-width: 400px) {
   .nav ul {
     margin-top: 50px;
-    margin-left: -250px;
+    margin-left: -300px;
     display: flex;
     flex-direction: row;
 } 
