@@ -11,7 +11,7 @@ const FollowingFeed = (props) => {
   const [followersPrompts, setFollowersPrompts] = useState([]);
   const { prompts } = useContext(PromptLandContext);
 
-  //check to see if user is following following_user
+  //check to see if user is following followee
   useEffect(() => {
     const forUser = user.nickname;
     fetch(`${API_BASE_URL}/all/${forUser}`,
@@ -39,7 +39,7 @@ const FollowingFeed = (props) => {
     console.log(prompts);
     let followingArray = [];
     following.map((f) => {
-      followingArray.push(f.following_user);
+      followingArray.push(f.followee);
     });
     console.log(followingArray);
     const findFollowersPrompts = prompts.filter((p) =>

@@ -3,12 +3,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { API_BASE_URL } from '../config'
 
 const FollowButton = (props) => {
-  const followsUser = props.followUser;
+  const userToFollow = props.followUser;
   const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
   const [following, setFollowing] = useState([]);
   const [isFollowing, setIsFollowing] = useState();
 
-  //check to see if user is following following_user
+  //check to see if user is following userToFollow
   useEffect(() => {
     const forUser = user.nickname;
     fetch(`${API_BASE_URL}/all/${forUser}`,
@@ -35,10 +35,10 @@ const FollowButton = (props) => {
   useEffect(() => {
     let followingArray = [];
     following.map((f) => {
-      followingArray.push(f.following_user);
+      followingArray.push(f.followee);
     });
     console.log(followingArray);
-    followingArray.includes(followsUser)
+    followingArray.includes(userToFollow)
       ? setIsFollowing(false)
       : setIsFollowing(true);
     console.log(isFollowing);
@@ -50,7 +50,7 @@ const FollowButton = (props) => {
     const token = await getAccessTokenSilently();
     const newFollow = {
       username: user.nickname,
-      following_user: followsUser,
+      followee: userToFollow,
     };
     fetch(`https://shielded-inlet-60576.herokuapp.com/api/followers`, {
       method: "POST",
@@ -77,7 +77,7 @@ const FollowButton = (props) => {
     const token = await getAccessTokenSilently();
     let id;
     following.map((f) => {
-      if (f.following_user === followsUser) {
+      if (f.followee === userToFollow) {
         id = f.id;
       }
     });
