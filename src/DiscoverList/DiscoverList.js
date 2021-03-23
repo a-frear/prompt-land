@@ -6,7 +6,7 @@ import PromptLandContext from "../PromptLandContext";
 class DiscoverList extends Component {
   static contextType = PromptLandContext;
   render() {
-    tagsArray = this.props.tags.map((tag) => {
+    const tagsArray = this.props.tags.map((tag) => {
       tag.label.toLowerCase();
     });
     const { prompts = [] } = this.context;
