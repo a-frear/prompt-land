@@ -15,6 +15,7 @@ import Discover from "./Discover/Discover";
 import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
 import config from './config';
+import Home from "./Home/Home";
 
 class App extends Component {
   state = {
@@ -66,7 +67,7 @@ class App extends Component {
             />
           </div>
           <header className="App-header">
-            <Link className="app_title" to={"/"}>
+            <Link className="app_title" to={"/feed"}>
               <h1>Prompt Land</h1>
             </Link>
             <Nav />
@@ -75,13 +76,25 @@ class App extends Component {
             <UserNav />
           </div>
           <Route path="/profile" component={Profile} />
-          <Route exact path="/" component={PromptFeed} />
+          <Route path="/feed" component={PromptFeed} />
           <Route path="/new-prompt" component={NewPrompt} />
           <Route path="/tags/:tagId" component={TagFeed} />
           <Route path="/users/:userId" component={UserPrompts} />
           <Route path="/discover" component={Discover} />
           <Route path="/following" component={FollowingFeed} />
           <Route path="/login" component={LoginButton} />
+          <Route path="/home" component={Home} />
+          <section className='home'>
+        <Link className="feed" to={"/feed"}>
+        <h1 className='welcome'>welcome to <span className='artists-prompts'>prompt land</span></h1>
+        <h3 className='home-desc'>a place to write and share artist prompts</h3>
+        <img
+        src={landscape}
+        alt="prompt land landscape"
+        className='home-img'
+        />
+        </Link>
+        </section>
         </div>
       </PromptLandContext.Provider>
     );

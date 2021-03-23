@@ -34,6 +34,42 @@ body {
   margin: 50px 0px 25px 15px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.home {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 60px;
+  line-height: 70px;
+  color: #2e2e3a;
+}
+
+.artists-prompts {
+  color: #e93c0c
+}
+
+.home-desc {
+  font-size: 30px;
+  margin-top: -25px;
+  color: #2e2e3a;
+}
+
+.home-img {
+  max-width: 1000px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100%;
+}
+
 /*** USER NAV (PROFILE AND POST LINKS) ****/
 .userNav-header {
   font-size: 24px;
@@ -283,6 +319,9 @@ li {
 }
 
 @media (max-width: 700px) {
+  .home-img {
+    margin-top: 30px;
+  }
   .landscape-mirror-img {
     display: none;
   }
@@ -308,6 +347,10 @@ li {
 }
 
 @media (max-width: 600px) {
+  .home {
+    margin-top: 20px;
+  }
+  
   .Prompt {
     max-width: 300px;
     min-width: 300px;
@@ -333,6 +376,17 @@ li {
 }
 
 @media (max-width: 420px) {
+  .home {
+    margin-top: 40px;
+  }
+
+  .welcome {
+    font-size: 45px;
+  }
+  .home-desc {
+    font-size: 20px;
+    margin-top: -25px;
+  }
   .app_title {
     font-size: 20px;
   }
@@ -379,7 +433,7 @@ li {
 
 @media (max-width: 290px) {
   .app_title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
 }
