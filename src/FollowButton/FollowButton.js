@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import config from '../config';
+import { useHistory } from "react-router-dom";
 
 const FollowButton = (props) => {
   const userToFollow = props.followUser;
