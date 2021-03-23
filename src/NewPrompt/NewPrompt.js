@@ -35,7 +35,7 @@ const NewPrompt = () => {
   const history = useHistory();
 
   const tagsArray = selected.map(tag => {
-    tag.value;
+    return tag.value;
   });
 
   const handleSubmit = async (e) => {

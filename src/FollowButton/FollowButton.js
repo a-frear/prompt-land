@@ -34,7 +34,7 @@ const FollowButton = (props) => {
 
   useEffect(() => {
     const followingArray = following.map((f) => {
-      f.followee;
+      return f.followee;
     });
     console.log(followingArray);
     followingArray.includes(userToFollow)
@@ -77,7 +77,7 @@ const FollowButton = (props) => {
     let id;
     following.map((f) => {
       if (f.followee === userToFollow) {
-        id = f.id;
+        return id = f.id;
       }
     });
     fetch(`${config.API_BASE_URL}/followers/${id}`, {
