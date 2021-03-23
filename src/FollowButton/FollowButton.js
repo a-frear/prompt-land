@@ -46,7 +46,7 @@ const FollowButton = (props) => {
   }, [following]);
 
   useEffect(() => {
-    history.push(`/users/${userToFollow}`)
+    history.go(`/users/${userToFollow}`)
   }, [isFollowing]);
 
   const handleFollow = async (e) => {
