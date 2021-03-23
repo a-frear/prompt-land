@@ -37,8 +37,8 @@ const FollowingFeed = (props) => {
 
   useEffect(() => {
     console.log('hi');
-    let followingArray = following.map((f) => {
-      followingArray.push(f.followee);
+    const followingArray = following.map((f) => {
+      f.followee
     });
     console.log(followingArray);
     const findFollowersPrompts = prompts.filter((p) =>
