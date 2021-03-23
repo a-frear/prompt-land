@@ -40,9 +40,9 @@ const NewPrompt = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    function goHome() {
-      history.push("/profile");
-    }
+    // function goHome() {
+    //   history.push("/feed");
+    // }
     const token = await getAccessTokenSilently();
     const newPrompt = {
       username: user.nickname,
@@ -66,7 +66,7 @@ const NewPrompt = () => {
       .then((prompt) => {
         setPrompts([...prompts, prompt]);
       })
-      .then(goHome)
+      // .then(goHome)
       .catch((error) => {
         console.error({ error });
       });
