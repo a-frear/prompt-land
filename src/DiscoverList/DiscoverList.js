@@ -6,12 +6,12 @@ import PromptLandContext from "../PromptLandContext";
 class DiscoverList extends Component {
   static contextType = PromptLandContext;
   render() {
-    console.log(this.props.tags)
     const tagsArray = this.props.tags.map((tag) => {
       return tag.value
     });
     console.log(tagsArray)
     const { prompts = [] } = this.context;
+    console.log(prompts)
 
     function contains(target, pattern) {
       let value = 0;
