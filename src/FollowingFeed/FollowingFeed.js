@@ -27,18 +27,15 @@ const FollowingFeed = (props) => {
         return res.json();
       })
       .then(setFollowing)
-      .then(console.log(following))
       .catch((error) => {
         console.error({ error });
       });
   }, []);
 
   useEffect(() => {
-    console.log(following);
     const followingArray = following.map((f) => {
       return f.followee;
     });
-    console.log(followingArray);
     const findFollowersPrompts = prompts.filter((p) =>
       followingArray.includes(p.username)
     );
