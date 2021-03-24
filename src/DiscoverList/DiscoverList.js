@@ -9,7 +9,6 @@ class DiscoverList extends Component {
     const tagsArray = this.props.tags.map((tag) => {
       return tag.label.toLowerCase()
     });
-    console.log(tagsArray)
     const { prompts = [] } = this.context;
 
     function contains(target, pattern) {
