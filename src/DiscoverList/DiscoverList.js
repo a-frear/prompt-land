@@ -7,7 +7,7 @@ class DiscoverList extends Component {
   static contextType = PromptLandContext;
   render() {
     const tagsArray = this.props.tags.map((tag) => {
-      tag.label.toLowerCase();
+      return tag.value
     });
     const { prompts = [] } = this.context;
 
