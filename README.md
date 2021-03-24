@@ -32,6 +32,12 @@ Express
 
 PostgreSQL
 
+# Test Log In: 
+
+test@test.com
+
+Test123!
+
 # API repo:
 
 https://github.com/a-frear/prompt-land-api
