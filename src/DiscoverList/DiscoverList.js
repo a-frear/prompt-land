@@ -12,8 +12,6 @@ class DiscoverList extends Component {
     console.log(tagsArray)
     const { prompts = [] } = this.context;
 
-    console.log(prompts)
-
     function contains(target, pattern) {
       let value = 0;
       pattern.forEach(function (word) {
@@ -22,7 +20,7 @@ class DiscoverList extends Component {
       return value === 1;
     }
     
-    const discoverPrompts = prompts.filter((p) => contains(p.tags, tagsArray));
+    const discoverPrompts = prompts.filter(p => contains(p.tags, tagsArray));
     console.log(discoverPrompts)
     AOS.init({
       delay: 200,
