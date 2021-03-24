@@ -16,7 +16,7 @@ const Profile = () => {
     isAuthenticated && (
       <div className="profile">
         <div className="profile-header">
-          <h2 className="prompts-by">{user.given_name}'s prompts</h2>
+          <h2 className="prompts-by">Your Prompts</h2>
         </div>
         <div className="users-prompts">
           <ul>

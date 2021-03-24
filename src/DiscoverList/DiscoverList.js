@@ -20,7 +20,6 @@ class DiscoverList extends Component {
     }
 
     const discoverPrompts = prompts.filter((p) => contains(p.tags, tagsArray));
-    console.log(discoverPrompts);
     AOS.init({
       delay: 200,
     });
