@@ -21,7 +21,7 @@ class DiscoverList extends Component {
       return value === 1;
     }
     
-    const discoverPrompts = prompts.filter((p) => contains(p.tags, tagsArray));
+    const discoverPrompts = prompts.filter(p => contains(p.tags, tagsArray));
     console.log(discoverPrompts)
     AOS.init({
       delay: 200,
