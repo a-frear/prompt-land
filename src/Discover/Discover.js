@@ -24,6 +24,8 @@ const Discover = () => {
     { label: "Music", value: "16" },
   ];
 
+  console.log(selected)
+
   return (
     <div className="discover">
       <form className="discover-form">
