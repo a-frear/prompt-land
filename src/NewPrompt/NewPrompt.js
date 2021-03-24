@@ -11,6 +11,8 @@ const NewPrompt = () => {
   const [prompts, setPrompts] = useState([]);
   useContext(PromptLandContext);
 
+  console.log(prompts)
+
   const options = [
     { label: "Whatever", value: "1" },
     { label: "Free Writing", value: "2" },
