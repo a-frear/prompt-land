@@ -1,15 +1,16 @@
 # Prompt Land
 
-Discover artist's prompts. 
+Discover artist's prompts.
 
 # Live link:
+
 https://prompt-land.com/
 
 # Summary
 
-Share and write artist's prompts. 
-Discover prompts for different mediums. 
-Follow other artists for inspiration. 
+Share and write artist's prompts.
+Discover prompts for different mediums.
+Follow other artists for inspiration.
 
 # Screenshots:
 
@@ -34,4 +35,3 @@ PostgreSQL
 # API repo:
 
 https://github.com/a-frear/prompt-land-api
-

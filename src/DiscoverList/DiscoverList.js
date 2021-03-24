@@ -7,7 +7,7 @@ class DiscoverList extends Component {
   static contextType = PromptLandContext;
   render() {
     const tagsArray = this.props.tags.map((tag) => {
-      return tag.label.toLowerCase()
+      return tag.label.toLowerCase();
     });
     const { prompts = [] } = this.context;
 
@@ -18,9 +18,9 @@ class DiscoverList extends Component {
       });
       return value === 1;
     }
-    
-    const discoverPrompts = prompts.filter(p => contains(p.tags, tagsArray));
-    console.log(discoverPrompts)
+
+    const discoverPrompts = prompts.filter((p) => contains(p.tags, tagsArray));
+    console.log(discoverPrompts);
     AOS.init({
       delay: 200,
     });
