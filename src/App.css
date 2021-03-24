@@ -106,7 +106,7 @@ a {
   --borderWidth: 3px;
   background: #e2e2df;
   position: relative;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 .Prompt:after {
   content: "";
@@ -345,10 +345,6 @@ li {
 }
 
 @media (max-width: 600px) {
-
-}
-
-@media (max-width: 600px) {
   .home {
     margin-top: 20px;
   }
@@ -397,6 +393,7 @@ li {
     max-width: 250px;
     min-width: 250px;
     margin-top: 15px;
+    margin-left: 15px;
     padding: 12px;
   }
 
