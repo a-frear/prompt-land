@@ -98,38 +98,6 @@ a {
 }
 
 /*** PROMPT CARD *****/
-
-.username {
-  color: #333533;
-  text-decoration: none;
-  text-transform: lowercase;
-  font-size: 30px;
-  letter-spacing: 3px;
-}
-
-.prompt_content {
-  color: #e93c0c;
-  font-size: 58px;
-}
-
-.date {
-  color: #331d0a;
-}
-
-.tag_list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 24px;
-  align-items: flex-end;
-}
-
-.tag-link {
-  text-decoration: none;
-  color: #2e2e3a;
-  margin-left: -35px;
-}
-
 .Prompt {
   margin: 50px;
   padding: 30px;
@@ -138,7 +106,7 @@ a {
   --borderWidth: 3px;
   background: #e2e2df;
   position: relative;
-  margin-left: 0px;
+  margin-left: 5px;
 }
 .Prompt:after {
   content: "";
@@ -170,6 +138,37 @@ a {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.username {
+  color: #333533;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.prompt_content {
+  color: #e93c0c;
+  font-size: 58px;
+}
+
+.date {
+  color: #331d0a;
+}
+
+.tag_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24px;
+  align-items: flex-end;
+}
+
+.tag-link {
+  text-decoration: none;
+  color: #2e2e3a;
+  margin-left: -35px;
 }
 
 /*** NEW PROMPT  *****/
