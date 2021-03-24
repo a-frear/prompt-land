@@ -18,6 +18,7 @@ class DiscoverList extends Component {
       });
       return value === 1;
     }
+    console.log(prompts)
     const discoverPrompts = prompts.filter((p) => contains(p.tags, tagsArray));
     console.log(discoverPrompts)
     AOS.init({
