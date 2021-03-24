@@ -39,6 +39,5 @@ const Profile = () => {
 };
 
 export default withAuthenticationRequired(Profile, {
-  returnTo: '/profile'
+  returnTo: "/profile",
 });
-

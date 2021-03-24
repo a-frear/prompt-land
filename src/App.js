@@ -14,7 +14,7 @@ import landscapeMirror from "./img/landscape-mirror.jpg";
 import Discover from "./Discover/Discover";
 import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
-import config from './config';
+import config from "./config";
 import Home from "./Home/Home";
 
 class App extends Component {
@@ -84,17 +84,21 @@ class App extends Component {
           <Route path="/following" component={FollowingFeed} />
           <Route path="/login" component={LoginButton} />
           <Route path="/home" component={Home} />
-          <section className='home'>
-        <Link className="feed" to={"/feed"}>
-        <h1 className='welcome'>welcome to <span className='artists-prompts'>prompt land</span></h1>
-        <h3 className='home-desc'>a place to write and share artist prompts</h3>
-        <img
-        src={landscape}
-        alt="prompt land landscape"
-        className='home-img'
-        />
-        </Link>
-        </section>
+          <section className="home">
+            <Link className="feed" to={"/feed"}>
+              <h1 className="welcome">
+                welcome to <span className="artists-prompts">prompt land</span>
+              </h1>
+              <h3 className="home-desc">
+                a place to write and share artist prompts
+              </h3>
+              <img
+                src={landscape}
+                alt="prompt land landscape"
+                className="home-img"
+              />
+            </Link>
+          </section>
         </div>
       </PromptLandContext.Provider>
     );

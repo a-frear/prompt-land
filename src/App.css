@@ -52,7 +52,7 @@ a {
 }
 
 .artists-prompts {
-  color: #e93c0c
+  color: #e93c0c;
 }
 
 .home-desc {
@@ -341,14 +341,13 @@ li {
     font-size: 24px;
     color: #e93c0c;
   }
-
 }
 
 @media (max-width: 600px) {
   .home {
     margin-top: 20px;
   }
-  
+
   .Prompt {
     max-width: 300px;
     min-width: 300px;
@@ -370,7 +369,6 @@ li {
     margin-top: -10px;
     font-size: 24px;
   }
-
 }
 
 @media (max-width: 420px) {
@@ -434,12 +432,10 @@ li {
   .app_title {
     font-size: 16px;
   }
-
 }
 
 @media (max-width: 268px) {
   .app_title {
     font-size: 14px;
   }
-
 }

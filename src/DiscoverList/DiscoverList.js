@@ -10,7 +10,7 @@ class DiscoverList extends Component {
       tag.label.toLowerCase();
     });
     const { prompts = [] } = this.context;
-    
+
     function contains(target, pattern) {
       let value = 0;
       pattern.forEach(function (word) {

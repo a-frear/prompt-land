@@ -3,7 +3,7 @@ import AOS from "aos";
 import React, { useState, useEffect, useContext } from "react";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import PromptLandContext from "../PromptLandContext";
-import config from '../config'
+import config from "../config";
 
 const FollowingFeed = (props) => {
   const { isAuthenticated, user } = useAuth0();
@@ -14,14 +14,12 @@ const FollowingFeed = (props) => {
   //check to see if user is following followee
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`,
-      {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-        },
-      }
-    )
+    fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
       .then((res) => {
         if (!res.ok) {
           throw new Error(res.status);
@@ -38,7 +36,7 @@ const FollowingFeed = (props) => {
   useEffect(() => {
     console.log(following);
     const followingArray = following.map((f) => {
-      return f.followee
+      return f.followee;
     });
     console.log(followingArray);
     const findFollowersPrompts = prompts.filter((p) =>
@@ -77,5 +75,5 @@ const FollowingFeed = (props) => {
 };
 
 export default withAuthenticationRequired(FollowingFeed, {
-  returnTo: '/following'
+  returnTo: "/following",
 });

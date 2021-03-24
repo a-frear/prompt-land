@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import config from '../config';
+import config from "../config";
 import { useHistory } from "react-router-dom";
 
 const FollowButton = (props) => {
@@ -12,14 +12,12 @@ const FollowButton = (props) => {
 
   useEffect(() => {
     const forUser = user.nickname;
-    fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`,
-      {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-        },
-      }
-    )
+    fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
       .then((res) => {
         if (!res.ok) {
           throw new Error(res.status);
@@ -34,8 +32,8 @@ const FollowButton = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log(following)
-    const followingArray = following.map(f => {
+    console.log(following);
+    const followingArray = following.map((f) => {
       return f.followee;
     });
     console.log(followingArray);
@@ -79,7 +77,7 @@ const FollowButton = (props) => {
     let id;
     following.map((f) => {
       if (f.followee === userToFollow) {
-        return id = f.id;
+        return (id = f.id);
       }
     });
     fetch(`${config.API_BASE_URL}/followers/${id}`, {
@@ -90,7 +88,7 @@ const FollowButton = (props) => {
     })
       .then(setIsFollowing(false))
       .then(history.push(`/`))
-      .then(alert('User unfollowed!'))
+      .then(alert("User unfollowed!"))
       .catch((error) => {
         console.error({ error });
       });
@@ -113,4 +111,4 @@ const FollowButton = (props) => {
   );
 };
 
-export default FollowButton
+export default FollowButton;

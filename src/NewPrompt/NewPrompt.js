@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import MultiSelect from "react-multi-select-component";
 import { useAuth0 } from "@auth0/auth0-react";
-import config from '../config'
+import config from "../config";
 import PromptLandContext from "../PromptLandContext";
 import { useHistory } from "react-router-dom";
 
@@ -30,11 +30,9 @@ const NewPrompt = () => {
     { label: "Music", value: "16" },
   ];
 
-
-
   const history = useHistory();
 
-  const tagsArray = selected.map(tag => {
+  const tagsArray = selected.map((tag) => {
     return tag.value;
   });
 
