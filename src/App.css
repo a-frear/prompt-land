@@ -39,7 +39,7 @@ a {
 }
 
 .home {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -138,6 +138,7 @@ a {
   --borderWidth: 3px;
   background: #e2e2df;
   position: relative;
+  margin-left: 0px;
 }
 .Prompt:after {
   content: "";
@@ -293,6 +294,7 @@ li {
   flex-direction: column;
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 500px;
 }
 
 .discover-label {
@@ -355,7 +357,7 @@ li {
   .Prompt {
     max-width: 300px;
     min-width: 300px;
-    margin: 5px;
+    margin-top: 10px;
     border: solid 2px #2e2e3a;
   }
 
