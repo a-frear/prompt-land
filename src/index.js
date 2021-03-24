@@ -11,6 +11,7 @@ const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 ReactDOM.render(
   <BrowserRouter>
+    <ScrollToTop />
     <Auth0Provider
       domain={domain}
       clientId={clientId}
