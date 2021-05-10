@@ -16,7 +16,7 @@ import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
 import config from "./config";
 import Home from "./Home/Home";
-import LoadingContainer from "./LoadingContainer/LoadingContainer"
+import LoadingContainer from "./LoadingContainer/LoadingContainer";
 
 class App extends Component {
   state = {
@@ -78,7 +78,11 @@ class App extends Component {
           <div className="userNav-header">
             <UserNav />
           </div>
-          <div className={this.state.loading ? "loading" : "notLoading"}> <LoadingContainer /> </div>;
+          <div className={this.state.loading ? "loading" : "notLoading"}>
+            {" "}
+            <LoadingContainer />{" "}
+          </div>
+          ;
           <Route path="/profile" component={Profile} />
           <Route path="/feed" component={PromptFeed} />
           <Route path="/new-prompt" component={NewPrompt} />
