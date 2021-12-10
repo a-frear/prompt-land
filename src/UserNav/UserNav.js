@@ -16,14 +16,12 @@ const UserNav = () => {
     isAuthenticated && (
       <nav className="userNav">
         <ul className="userNavUL">
-          <NavLink
-            className="navigation-link-user"
-            to="/new-prompt"
-            onClick={setIsActive("new-prompt")}
-          >
+          <NavLink className="navigation-link-user" to="/new-prompt">
             <li
+              onClick={setIsActive("new-prompt")}
               className={`icon-nav ${
-                 isActive === "new-prompt"
+                window.location.pathname === "/new-prompt" ||
+                isActive === "new-prompt"
                   ? "icon-nav-active"
                   : ""
               }`}
@@ -31,13 +29,11 @@ const UserNav = () => {
               Share
             </li>
           </NavLink>
-          <NavLink
-            className="navigation-link-user"
-            to="/profile"
-            onClick={setIsActive("profile")}
-          >
+          <NavLink className="navigation-link-user" to="/profile">
             <li
+              onClick={setIsActive("profile")}
               className={`icon-nav ${
+                window.location.pathname === "/profile" ||
                 isActive === "profile"
                   ? "icon-nav-active"
                   : ""
@@ -46,13 +42,11 @@ const UserNav = () => {
               Profile
             </li>
           </NavLink>
-          <NavLink
-            className="navigation-link-user"
-            to="/following"
-            onClick={setIsActive("following")}
-          >
+          <NavLink className="navigation-link-user" to="/following">
             <li
+              onClick={setIsActive("following")}
               className={`icon-nav ${
+                window.location.pathname === "/following" ||
                 isActive === "following"
                   ? "icon-nav-active"
                   : ""
