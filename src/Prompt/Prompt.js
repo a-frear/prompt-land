@@ -7,7 +7,7 @@ class Prompt extends Component {
     // const splitDate = modified.split("");
     // const spliceDate = splitDate.splice(0, 10);
 
-    const date = modified.toLocaleString("en-US", {
+    const date = new Date(modified).toLocaleString("en-US", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
