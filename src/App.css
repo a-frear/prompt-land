@@ -122,13 +122,12 @@ a {
   margin-right: 30px; */
 }
 
-.icon-nav {
+.navigation-link-user{
   color: #333533;
 }
 
 .active-nav {
-  color: #e93c0c!important;
-  border-bottom: 1px black solid;
+  color: #e93c0c;
 }
 
 .icon-nav:hover {

@@ -33,7 +33,7 @@ const Navigation = styled.header`
 }
 
 li:hover {
-    color: #f73bb2;
+  color: #e93c0c;
 }
 
 @media only screen and (max-width: 700px) {
@@ -82,7 +82,9 @@ class Nav extends Component {
               to="/discover"
               onClick={(e) => this.handleToggle(e)}
             >
-              <li>Discover</li>
+              <li partiallyActive={true} activeClassName="active-nav">
+                Discover
+              </li>
             </NavLink>
             <LoginButton />
             <LogoutButton />
