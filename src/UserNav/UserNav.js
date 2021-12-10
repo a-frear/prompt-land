@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faUsers,
-  faPlusSquare,
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faUser,
+//   faUsers,
+//   faPlusSquare,
+// } from "@fortawesome/free-solid-svg-icons";
 
 const UserNav = () => {
   const { isAuthenticated } = useAuth0();
@@ -17,17 +17,17 @@ const UserNav = () => {
         <ul className="userNavUL">
           <NavLink className="navigation-link-user" to="/new-prompt">
             <li className="icon-nav">
-              <FontAwesomeIcon icon={faPlusSquare} />
+              Share
             </li>
           </NavLink>
           <NavLink className="navigation-link-user" to="/profile">
             <li className="icon-nav">
-              <FontAwesomeIcon icon={faUser} />
+              Profile
             </li>
           </NavLink>
           <NavLink className="navigation-link-user" to="/following">
             <li className="icon-nav">
-              <FontAwesomeIcon icon={faUsers} />
+              Following
             </li>
           </NavLink>
         </ul>
