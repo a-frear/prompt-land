@@ -8,7 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 //   faPlusSquare,
 // } from "@fortawesome/free-solid-svg-icons";
 
-const UserNav = (currentPage) => {
+const UserNav = ({ currentPage = window.location.pathname }) => {
   const { isAuthenticated } = useAuth0();
   const [isActive, setIsActive] = useState();
 
