@@ -11,13 +11,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 const UserNav = () => {
   const { isAuthenticated } = useAuth0();
   const [isActive, setIsActive] = useState();
-  const [currentPage] = useState(window.location.pathname);
+  const [page, setPage] = useState(true);
 
   console.log({isActive})
 
   useEffect(() => {
     setIsActive(window.location.pathname);
-  }, [currentPage]);
+  }, [page]);
 
   return (
     isAuthenticated && (
@@ -26,10 +26,9 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/new-prompt">
             <li
               className={`icon-nav ${
-                isActive === "/new-prompt"
-                  ? "icon-nav-active"
-                  : ""
+                isActive === "/new-prompt" ? "icon-nav-active" : ""
               }`}
+              onClick={setPage(!page)}
             >
               Share
             </li>
@@ -37,10 +36,9 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/profile">
             <li
               className={`icon-nav ${
-                isActive === "/profile"
-                  ? "icon-nav-active"
-                  : ""
+                isActive === "/profile" ? "icon-nav-active" : ""
               }`}
+              onClick={setPage(!page)}
             >
               Profile
             </li>
@@ -48,10 +46,9 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/following">
             <li
               className={`icon-nav ${
-                isActive === "/following"
-                  ? "icon-nav-active"
-                  : ""
+                isActive === "/following" ? "icon-nav-active" : ""
               }`}
+              onClick={setPage(!page)}
             >
               Following
             </li>
