@@ -15,9 +15,9 @@ const Profile = () => {
   return (
     isAuthenticated && (
       <div className="profile">
-        <div className="profile-header">
+        {/* <div className="profile-header">
           <h2 className="prompts-by">Your Prompts</h2>
-        </div>
+        </div> */}
         <div className="users-prompts">
           <ul>
             {userPrompts.map((prompt) => (
