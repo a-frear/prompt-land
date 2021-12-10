@@ -106,10 +106,11 @@ a {
 
 .userNavUL {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 300px;
+  justify-content: space-between;
+  max-width: 340px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  border-bottom: 0.8px #2e2e3a solid;
+  padding-inline-start: 0;
 }
 
 .navigation-link-user {
@@ -122,6 +123,24 @@ a {
 
 .icon-nav {
   color: #333533;
+}
+
+.icon-nav-active {
+  color: #e93c0c;
+}
+
+.icon-nav:hover {
+  color: #e93c0c;
+}
+
+@media (max-width: 700px) {
+  .userNavUL {
+    margin-top: 60px;
+    max-width: 250px;
+  }
+  .icon-nav {
+    font-size: 1.4rem;
+}
 }
 
 /*** PROMPT CARD *****/
@@ -201,7 +220,7 @@ a {
 /*** NEW PROMPT  *****/
 
 .new-prompt-form {
-  margin: 0 auto;
+  margin: -1px auto 0 auto;
   padding: 30px;
   max-width: 500px;
   border: solid 2px #2e2e3a;
@@ -287,17 +306,20 @@ li {
   justify-content: space-around;
 }
 
+/********* USER PROMPTS **********/
 .prompts-by {
+  text-align: center;
   font-size: 32px;
   margin: 40px 0px 0px -25px;
   font-weight: 100;
 }
 
-/********* USER PROMPTS **********/
-.prompts-by {
-  text-align: center;
-  margin-top: 50px;
+@media (max-width: 700) {
+  .prompts-by {
+    margin-top: 24px;
+  }
 }
+
 
 /********* FOLLOW BUTTON ************/
 .follow-button {
@@ -312,6 +334,12 @@ li {
   border: none;
   font-size: 16px;
   font-family: "Newsreader", serif;
+}
+
+@media (max-width: 700px) {
+  .follow-button {
+    margin-top: 20px;
+  }
 }
 
 /********** DISCOVER *****************/
@@ -389,7 +417,6 @@ li {
 
   .prompts-by {
     font-size: 30px;
-    margin: 50px 0px 15px 45px;
   }
 }
 @media (max-width: 400px) {

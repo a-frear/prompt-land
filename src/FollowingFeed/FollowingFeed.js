@@ -48,9 +48,9 @@ const FollowingFeed = (props) => {
   return (
     isAuthenticated && (
       <section className="PromptFeed">
-        <div className="profile-header">
+        {/* <div className="profile-header">
           <h2 className="prompts-by">Prompts from friends</h2>
-        </div>
+        </div> */}
         <ul className="prompt-feed-list">
           {followersPrompts.map((prompt) => (
             <li key={prompt.id}>
