@@ -12,6 +12,8 @@ const UserNav = () => {
   const { isAuthenticated } = useAuth0();
   const [isActive, setIsActive] = useState();
 
+  console.log({isActive})
+
     useEffect(() => {
       setIsActive(window.location.pathname);
     }, []);
