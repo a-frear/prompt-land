@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 class Prompt extends Component {
   render() {
     const { prompt, modified, username, tags } = this.props;
-    const splitDate = modified.split("");
-    const spliceDate = splitDate.splice(0, 10);
+    // const splitDate = modified.split("");
+    // const spliceDate = splitDate.splice(0, 10);
+
+    const date = modified.toLocaleString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
 
     return (
       <div className="Prompt">
@@ -14,7 +20,7 @@ class Prompt extends Component {
             {username}
           </Link>
         </h2>
-        <h3 className="date">{spliceDate}</h3>
+        <h3 className="date">{date}</h3>
         <p className="prompt_content">{prompt}</p>
         <ul className="tag_list">
           {tags.map((tag) => (
