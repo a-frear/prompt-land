@@ -20,7 +20,12 @@ const UserNav = ({ currentPage = window.location.pathname }) => {
     isAuthenticated && (
       <nav className="userNav">
         <ul className="userNavUL">
-          <NavLink className="navigation-link-user" to="/new-prompt">
+          <NavLink
+            className="navigation-link-user"
+            to="/new-prompt"
+            partiallyActive={true}
+            activeClassName="active-nav"
+          >
             <li
               className={`icon-nav ${
                 isActive === "/new-prompt" ? "icon-nav-active" : ""
@@ -29,7 +34,12 @@ const UserNav = ({ currentPage = window.location.pathname }) => {
               Share
             </li>
           </NavLink>
-          <NavLink className="navigation-link-user" to="/profile">
+          <NavLink
+            className="navigation-link-user"
+            to="/profile"
+            partiallyActive={true}
+            activeClassName="active-nav"
+          >
             <li
               className={`icon-nav ${
                 isActive === "/profile" ? "icon-nav-active" : ""
@@ -38,7 +48,12 @@ const UserNav = ({ currentPage = window.location.pathname }) => {
               Profile
             </li>
           </NavLink>
-          <NavLink className="navigation-link-user" to="/following">
+          <NavLink
+            className="navigation-link-user"
+            to="/following"
+            partiallyActive={true}
+            activeClassName="active-nav"
+          >
             <li
               className={`icon-nav ${
                 isActive === "/following" ? "icon-nav-active" : ""

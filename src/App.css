@@ -126,8 +126,9 @@ a {
   color: #333533;
 }
 
-.icon-nav-active {
-  color: #e93c0c;
+.active-nav {
+  color: #e93c0c!important;
+  border-bottom: 1px black solid;
 }
 
 .icon-nav:hover {
