@@ -18,7 +18,6 @@ const UserNav = () => {
         <ul className="userNavUL">
           <NavLink className="navigation-link-user" to="/new-prompt">
             <li
-              onClick={setIsActive("new-prompt")}
               className={`icon-nav ${
                 window.location.pathname === "/new-prompt" ||
                 isActive === "new-prompt"
@@ -31,7 +30,6 @@ const UserNav = () => {
           </NavLink>
           <NavLink className="navigation-link-user" to="/profile">
             <li
-              onClick={setIsActive("profile")}
               className={`icon-nav ${
                 window.location.pathname === "/profile" ||
                 isActive === "profile"
@@ -44,7 +42,6 @@ const UserNav = () => {
           </NavLink>
           <NavLink className="navigation-link-user" to="/following">
             <li
-              onClick={setIsActive("following")}
               className={`icon-nav ${
                 window.location.pathname === "/following" ||
                 isActive === "following"
