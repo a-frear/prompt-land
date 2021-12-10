@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +10,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const UserNav = () => {
   const { isAuthenticated } = useAuth0();
-  const [isActive] = useState();
+  const [isActive, setIsActive] = useState();
+
+    useEffect(() => {
+      setIsActive(window.location.pathname);
+    }, []);
 
   return (
     isAuthenticated && (
@@ -19,8 +23,7 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/new-prompt">
             <li
               className={`icon-nav ${
-                window.location.pathname === "/new-prompt" ||
-                isActive === "new-prompt"
+                isActive === "/new-prompt"
                   ? "icon-nav-active"
                   : ""
               }`}
@@ -31,8 +34,7 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/profile">
             <li
               className={`icon-nav ${
-                window.location.pathname === "/profile" ||
-                isActive === "profile"
+                isActive === "/profile"
                   ? "icon-nav-active"
                   : ""
               }`}
@@ -43,8 +45,7 @@ const UserNav = () => {
           <NavLink className="navigation-link-user" to="/following">
             <li
               className={`icon-nav ${
-                window.location.pathname === "/following" ||
-                isActive === "following"
+                isActive === "/following"
                   ? "icon-nav-active"
                   : ""
               }`}
