@@ -111,6 +111,7 @@ a {
   margin: 0 auto;
   border-bottom: 0.8px #2e2e3a solid;
   padding-inline-start: 0;
+  padding-bottom: 20px;
 }
 
 .navigation-link-user {
