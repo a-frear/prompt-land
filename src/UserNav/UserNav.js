@@ -11,12 +11,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 const UserNav = () => {
   const { isAuthenticated } = useAuth0();
   const [isActive, setIsActive] = useState();
+  const [currentPage] = useState(window.location.pathname);
 
   console.log({isActive})
 
-    useEffect(() => {
-      setIsActive(window.location.pathname);
-    }, []);
+  useEffect(() => {
+    setIsActive(window.location.pathname);
+  }, [currentPage]);
 
   return (
     isAuthenticated && (
