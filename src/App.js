@@ -75,7 +75,7 @@ class App extends Component {
             <Nav />
           </header>
           <div className="userNav-header">
-            <UserNav />
+            <UserNav currentPage={window.location.pathname} />
           </div>
           <Route path="/profile" component={Profile} />
           <Route path="/feed" component={PromptFeed} />

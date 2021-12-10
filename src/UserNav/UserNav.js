@@ -8,16 +8,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 //   faPlusSquare,
 // } from "@fortawesome/free-solid-svg-icons";
 
-const UserNav = () => {
+const UserNav = (currentPage) => {
   const { isAuthenticated } = useAuth0();
   const [isActive, setIsActive] = useState();
-  const [page, setPage] = useState(true);
-
-  console.log({isActive})
 
   useEffect(() => {
     setIsActive(window.location.pathname);
-  }, [page]);
+  }, [currentPage]);
 
   return (
     isAuthenticated && (
@@ -28,7 +25,6 @@ const UserNav = () => {
               className={`icon-nav ${
                 isActive === "/new-prompt" ? "icon-nav-active" : ""
               }`}
-              onClick={setPage(!page)}
             >
               Share
             </li>
@@ -38,7 +34,6 @@ const UserNav = () => {
               className={`icon-nav ${
                 isActive === "/profile" ? "icon-nav-active" : ""
               }`}
-              onClick={setPage(!page)}
             >
               Profile
             </li>
@@ -48,7 +43,6 @@ const UserNav = () => {
               className={`icon-nav ${
                 isActive === "/following" ? "icon-nav-active" : ""
               }`}
-              onClick={setPage(!page)}
             >
               Following
             </li>
