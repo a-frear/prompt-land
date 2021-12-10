@@ -23,7 +23,7 @@ const UserNav = () => {
           >
             <li
               className={`icon-nav ${
-                window.location.pathname === "/new-prompt" || isActive === "new-prompt"
+                 isActive === "new-prompt"
                   ? "icon-nav-active"
                   : ""
               }`}
@@ -38,7 +38,6 @@ const UserNav = () => {
           >
             <li
               className={`icon-nav ${
-                window.location.pathname === "/profile" ||
                 isActive === "profile"
                   ? "icon-nav-active"
                   : ""
@@ -54,7 +53,6 @@ const UserNav = () => {
           >
             <li
               className={`icon-nav ${
-                window.location.pathname === "/following" ||
                 isActive === "following"
                   ? "icon-nav-active"
                   : ""
