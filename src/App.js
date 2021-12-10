@@ -16,13 +16,12 @@ import FollowingFeed from "./FollowingFeed/FollowingFeed";
 import LoginButton from "./LoginButton/LoginButton";
 import config from "./config";
 import Home from "./Home/Home";
-import LoadingContainer from "./LoadingContainer/LoadingContainer";
 
 class App extends Component {
   state = {
     prompts: [],
     error: null,
-    loading: true,
+    loading: false,
   };
 
   setPrompts = (prompts) => {
@@ -78,11 +77,6 @@ class App extends Component {
           <div className="userNav-header">
             <UserNav />
           </div>
-          <div className={this.state.loading ? "loading" : "notLoading"}>
-            {" "}
-            <LoadingContainer />{" "}
-          </div>
-          ;
           <Route path="/profile" component={Profile} />
           <Route path="/feed" component={PromptFeed} />
           <Route path="/new-prompt" component={NewPrompt} />
@@ -107,6 +101,14 @@ class App extends Component {
               />
             </Link>
           </section>
+          {/* <div className={this.state.loading ? "loading" : "notLoading"}>
+            <h1>Loading Prompts...</h1>
+          </div>
+          <div className={this.state.loading ? "notLoading" : "loading"}>
+            <Link to={"/feed"} className=" enter-link">
+              Enter
+            </Link>
+          </div> */}
         </div>
       </PromptLandContext.Provider>
     );

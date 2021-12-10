@@ -77,7 +77,24 @@ a {
 }
 
 .loading {
-  padding: 100px 0px 50px 0px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .loading {
+    margin-top: 100px
+  }
+}
+
+.enter-link {
+  font-size: 38px;
+  font-weight: 600;
+  color: #2e2e3a;
+}
+
+.enter-link:hover {
+  color: #e93c0c;
 }
 
 /*** USER NAV (PROFILE AND POST LINKS) ****/
