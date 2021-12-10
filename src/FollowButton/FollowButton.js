@@ -11,6 +11,9 @@ const FollowButton = (props) => {
   const history = useHistory();
 
   useEffect(() => {
+    if (!isAuthenticated) {
+      return
+    }
     const forUser = user.nickname;
     fetch(`${config.API_BASE_URL}/followers/follower/${forUser}`, {
       method: "GET",
