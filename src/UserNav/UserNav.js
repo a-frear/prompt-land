@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const UserNav = () => {
   const { isAuthenticated } = useAuth0();
-  const [isActive, setIsActive] = useState();
+  const [isActive] = useState();
 
   return (
     isAuthenticated && (
